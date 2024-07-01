@@ -1,4 +1,5 @@
-
+install:
+	npm install -g typescript
 
 git:
 	git pull &&\
