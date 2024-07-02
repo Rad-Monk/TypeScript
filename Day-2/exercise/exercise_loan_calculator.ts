@@ -7,3 +7,13 @@ function loanCalculator (principle: number, interestRate: number, months = 12): 
 
 let myLoan = loanCalculator(1000, 5);
 console.log(myLoan); // 86.07
+
+function love(name: string): "yes" | "no" {
+    if (name === "Rad") {
+        return "yes";
+    } else {
+        return "no";
+    }
+}
+
+console.log(love("Rad")); // yes
