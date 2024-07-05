@@ -20,3 +20,11 @@
 ### running html file
 - install "live server" extension
 - just click on bottom right, go live, it will run it for you nad navigate to your html
+
+### compiling modules using node
+- `tsc --module <compiletype> <file-to-compile>.ts` : this will compile the file you specified in the type you want, each module will get it's own js file.
+- `commonjs` and `es6` : are two common compiletypes, common js for nrml js file, you can test it by using `node main` in the directory where your `main.js` file is, fix the imports in that file, it's a bit wanky. `es6` is for running the js file on browser
+- `<script type="module" src=".\main.js"></script>` : running module from webpage, requires this in html, type as module to be specific
+
+### installing external libraries
+- `npm install --save-dev @types/<library-name>` : as most js libraries aren't typed, use prefix @types, this will install the library you wanna install as typed if it exists, if it doesn't then ts will raise an error.
