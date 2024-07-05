@@ -15,7 +15,6 @@
 
 ### running the compiled js file
 - `node ./build/add_func.js` : this command will run the js file, we added path because in this repository's case the js file will be inside build folder as specifed in ts.config.
-- 
 
 ### running html file
 - install "live server" extension
@@ -25,6 +24,7 @@
 - `tsc --module <compiletype> <file-to-compile>.ts` : this will compile the file you specified in the type you want, each module will get it's own js file.
 - `commonjs` and `es6` : are two common compiletypes, common js for nrml js file, you can test it by using `node main` in the directory where your `main.js` file is, fix the imports in that file, it's a bit wanky. `es6` is for running the js file on browser
 - `<script type="module" src=".\main.js"></script>` : running module from webpage, requires this in html, type as module to be specific
+- `tsc --outFile main.js main.ts`: when using mulitple namespaces across different files and using reference tags, you can use this command to generate single main.js file for all the reference tags
 
 ### installing external libraries
 - `npm install --save-dev @types/<library-name>` : as most js libraries aren't typed, use prefix @types, this will install the library you wanna install as typed if it exists, if it doesn't then ts will raise an error.
